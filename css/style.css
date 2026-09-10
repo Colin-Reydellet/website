@@ -561,17 +561,21 @@ textarea:focus-visible {
   box-shadow: 0 14px 34px rgba(0, 0, 0, .07);
 }
 
+/* flex centring, so each glyph sits dead centre whatever its own metrics */
 .contact-card-icon {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 58px;
   height: 58px;
-  line-height: 56px;
+  line-height: 1;
   margin-bottom: 1.25rem;
   font-size: 1.35rem;
   color: var(--gold-dark);
   border: 1px solid var(--gold);
   border-radius: 50%;
 }
+.contact-card-icon > i { display: block; }
 
 .contact-card-title {
   font-size: 1.05rem;
@@ -732,11 +736,21 @@ textarea:focus-visible {
 
 .site-footer {
   background-color: var(--ink);
-  padding: 3rem 0;
+  /* no vertical padding: the logo alone sets the height of the band */
+  padding: 0;
   border-top: 1px solid var(--ink-line);
 }
 
-.footer-logo { height: 52px; width: auto; }
+.footer-logo {
+  display: block;
+  height: 128px;
+  width: auto;
+}
+/* the logo is a block, so text-align cannot centre it when the footer stacks */
+@media (max-width: 767.98px) {
+  .site-footer { padding: 2.25rem 0; }
+  .footer-logo { height: 84px; margin: 0 auto; }
+}
 
 .footer-social {
   display: inline-block;
