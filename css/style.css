@@ -139,11 +139,11 @@ textarea:focus-visible {
 .navbar-brand { padding: 0; margin-right: 2rem; }
 
 .brand-logo {
-  height: 58px;
+  height: 72px;
   width: auto;
   transition: height .3s ease;
 }
-.nav-shrink .brand-logo { height: 42px; }
+.nav-shrink .brand-logo { height: 52px; }
 
 .site-nav .nav-link {
   font-size: .9rem;
@@ -177,6 +177,27 @@ textarea:focus-visible {
 .site-nav .nav-link.active::after,
 .site-nav .nav-item.active > .nav-link::after {
   width: calc(100% - 2.1rem);
+}
+
+/* gold LinkedIn badge sitting after the last nav link */
+.nav-social {
+  display: flex;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  margin-left: 1.05rem;
+  justify-content: center;
+  font-size: .95rem;
+  color: var(--gold);
+  background-color: var(--ink);
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  transition: color .25s ease, background-color .25s ease;
+}
+.nav-social:hover,
+.nav-social:focus {
+  color: var(--ink);
+  background-color: var(--gold);
 }
 
 .navbar-toggler {
@@ -739,7 +760,7 @@ textarea:focus-visible {
   .site-nav.nav-shrink { min-height: var(--nav-h-sm); }
 
   .brand-logo,
-  .nav-shrink .brand-logo { height: 40px; }
+  .nav-shrink .brand-logo { height: 48px; }
 
   /* the collapsed menu becomes a solid panel */
   #navbarLinks {
@@ -752,6 +773,9 @@ textarea:focus-visible {
   .site-nav .nav-link::after { left: 0; transform: none; }
   .site-nav .nav-link:hover::after,
   .site-nav .nav-item.active > .nav-link::after { width: 2rem; }
+
+  /* in the collapsed panel the badge lines up with the links */
+  .nav-social { margin: .7rem 0 .3rem; }
 
   .hero {
     min-height: 0;
