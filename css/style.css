@@ -245,7 +245,7 @@ textarea:focus-visible {
 /* same family as the subtitle below it, and as the logo wordmark */
 .hero-title {
   font-family: var(--font-sans);
-  font-size: clamp(2.4rem, 5.6vw, 4.1rem);
+  font-size: clamp(2.4rem, 5.6vw, 3.5rem);
   font-weight: 300;
   letter-spacing: .02em;
   line-height: 1.1;
@@ -264,7 +264,9 @@ textarea:focus-visible {
 }
 
 .hero-tagline {
-  font-size: 1.05rem;
+  /* lowercase, so a touch larger than .hero-subtitle to read at the same level */
+  font-size: 1.35rem;
+  line-height: 1.5;
   color: rgba(255, 255, 255, .72);
   max-width: 32rem;
   margin-bottom: 2.25rem;
@@ -389,11 +391,11 @@ textarea:focus-visible {
 /* --------------------------------------------------------- présentation ---- */
 
 /* mirror of the hero frame, offset down-left */
-.portrait-frame { position: relative; padding: 0 0 1.25rem 1.25rem; }
+.portrait-frame { position: relative; padding: .35rem 0 1.25rem 1.25rem; }
 .portrait-frame::before {
   content: '';
   position: absolute;
-  top: 1.25rem;
+  top: 1.6rem;
   left: 0;
   right: 1.25rem;
   bottom: 0;
@@ -430,6 +432,16 @@ textarea:focus-visible {
   color: var(--gold-dark);
 }
 .timeline-text { flex: 1 1 auto; }
+/* links stay in the body colour, marked by a thin gold underline */
+.timeline-text a {
+  color: inherit;
+  border-bottom: 1px solid var(--gold);
+}
+.timeline-text a:hover,
+.timeline-text a:focus {
+  color: var(--gold-dark);
+  border-bottom-color: var(--gold-dark);
+}
 
 /* -------------------------------------------------------------- domaines ---- */
 
@@ -802,7 +814,7 @@ textarea:focus-visible {
   body { font-size: 1rem; }
 
   .hero-mark { height: 58px; }
-  .hero-tagline { font-size: 1rem; }
+  .hero-tagline { font-size: 1.2rem; }
   .hero-tagline .sep { margin-left: .3rem; }
 
   .btn { display: block; width: 100%; }
