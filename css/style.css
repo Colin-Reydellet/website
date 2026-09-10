@@ -736,20 +736,19 @@ textarea:focus-visible {
 
 .site-footer {
   background-color: var(--ink);
-  /* no vertical padding: the logo alone sets the height of the band */
-  padding: 0;
+  padding: 1.75rem 0;
   border-top: 1px solid var(--ink-line);
 }
 
 .footer-logo {
   display: block;
-  height: 128px;
+  height: 84px;
   width: auto;
 }
 /* the logo is a block, so text-align cannot centre it when the footer stacks */
 @media (max-width: 767.98px) {
   .site-footer { padding: 2.25rem 0; }
-  .footer-logo { height: 84px; margin: 0 auto; }
+  .footer-logo { height: 64px; margin: 0 auto; }
 }
 
 .footer-social {
