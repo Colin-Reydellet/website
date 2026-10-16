@@ -307,10 +307,12 @@ textarea:focus-visible {
   left: 50%;
   bottom: 1.75rem;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 42px;
   height: 42px;
-  line-height: 42px;
-  text-align: center;
+  line-height: 1;
   color: var(--gold);
   border: 1px solid rgba(255, 190, 88, .4);
   border-radius: 50%;
@@ -460,12 +462,14 @@ textarea:focus-visible {
 
 .domain-icon {
   display: block;
+  text-align: center;
   font-size: 1.9rem;
   color: var(--gold);
   margin-bottom: 1.25rem;
 }
 
 .domain-title {
+  text-align: center;
   font-size: 1.3rem;
   color: #fff;
   margin-bottom: .85rem;
